@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="xyz.designtasktwo.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_backdrop"
+        android:adjustViewBounds="true"
+        android:id="@+id/backdrop"
+        android:contentDescription="@string/backdrop_image"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:fontFamily="sans-serif"
+        android:gravity="center_horizontal"
+        android:textStyle="normal"
+        android:layout_marginTop="16dp"
+        android:id="@+id/name"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="San Francisco,CA"
+        android:gravity="center"
+        android:fontFamily="sans-serif-condensed"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textStyle="normal"
+        android:layout_marginTop="4dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal">
+
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+            android:background="@drawable/circular_button"
+            android:src="@drawable/ic_chat"
+            android:id="@+id/chat"
+            android:layout_margin="16dp"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+            android:background="@drawable/circular_button"
+            android:src="@drawable/ic_gallery"
+            android:layout_toRightOf="@+id/chat"
+            android:layout_toEndOf="@+id/chat"
+            android:id="@+id/gallery"
+            android:layout_margin="16dp"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+            android:background="@drawable/circular_button"
+            android:src="@drawable/ic_location"
+            android:layout_toRightOf="@+id/gallery"
+            android:layout_toEndOf="@+id/gallery"
+            android:id="@+id/location"
+            android:layout_margin="16dp"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_friend"
+            style="?android:attr/buttonBarButtonStyle"
+            android:background="@drawable/circular_button"
+            android:layout_below="@+id/chat"
+            android:id="@+id/friend"
+            android:layout_margin="16dp"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_music"
+            style="?android:attr/buttonBarButtonStyle"
+            android:background="@drawable/circular_button"
+            android:layout_below="@+id/gallery"
+            android:layout_toRightOf="@+id/friend"
+            android:layout_toEndOf="@+id/friend"
+            android:id="@+id/music"
+            android:layout_margin="16dp"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_notifications"
+            style="?android:attr/buttonBarButtonStyle"
+            android:background="@drawable/circular_button"
+            android:layout_toRightOf="@+id/music"
+            android:layout_below="@+id/location"
+            android:layout_margin="16dp" />
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
