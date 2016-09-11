@@ -7,108 +7,188 @@
     tools:context="xyz.designtasktwo.MainActivity">
 
     <ImageView
+        android:id="@+id/backdrop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_backdrop"
         android:adjustViewBounds="true"
-        android:id="@+id/backdrop"
-        android:contentDescription="@string/backdrop_image"/>
+        android:contentDescription="@string/backdrop_image"
+        android:src="@drawable/ic_backdrop" />
 
     <TextView
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/name"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif"
         android:gravity="center_horizontal"
-        android:textStyle="normal"
-        android:layout_marginTop="16dp"
-        android:id="@+id/name"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+        android:text="@string/name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="normal" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="San Francisco,CA"
-        android:gravity="center"
+        android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="San Francisco,CA"
         android:textAppearance="?android:attr/textAppearance"
-        android:textStyle="normal"
-        android:layout_marginTop="4dp"/>
+        android:textStyle="normal" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:gravity="center_horizontal">
+        android:gravity="center">
 
-
-        <android.support.v7.widget.AppCompatImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="?android:attr/buttonBarButtonStyle"
-            android:background="@drawable/circular_button"
-            android:src="@drawable/ic_chat"
+        <LinearLayout
             android:id="@+id/chat"
-            android:layout_margin="16dp"/>
-
-        <android.support.v7.widget.AppCompatImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="?android:attr/buttonBarButtonStyle"
-            android:background="@drawable/circular_button"
-            android:src="@drawable/ic_gallery"
-            android:layout_toRightOf="@+id/chat"
-            android:layout_toEndOf="@+id/chat"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageButton
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circular_button"
+                android:src="@drawable/ic_chat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chat" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
             android:id="@+id/gallery"
-            android:layout_margin="16dp"/>
-
-        <android.support.v7.widget.AppCompatImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="?android:attr/buttonBarButtonStyle"
-            android:background="@drawable/circular_button"
-            android:src="@drawable/ic_location"
-            android:layout_toRightOf="@+id/gallery"
-            android:layout_toEndOf="@+id/gallery"
+            android:layout_margin="8dp"
+            android:layout_toEndOf="@+id/chat"
+            android:layout_toRightOf="@+id/chat"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageButton
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circular_button"
+                android:src="@drawable/ic_gallery" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gallery" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
             android:id="@+id/location"
-            android:layout_margin="16dp"/>
-
-        <android.support.v7.widget.AppCompatImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_friend"
-            style="?android:attr/buttonBarButtonStyle"
-            android:background="@drawable/circular_button"
-            android:layout_below="@+id/chat"
+            android:layout_margin="8dp"
+            android:layout_toEndOf="@+id/gallery"
+            android:layout_toRightOf="@+id/gallery"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageButton
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/circular_button"
+                android:src="@drawable/ic_location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/friend"
-            android:layout_margin="16dp"/>
-
-        <android.support.v7.widget.AppCompatImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_music"
-            style="?android:attr/buttonBarButtonStyle"
-            android:background="@drawable/circular_button"
-            android:layout_below="@+id/gallery"
-            android:layout_toRightOf="@+id/friend"
-            android:layout_toEndOf="@+id/friend"
+            android:layout_below="@+id/chat"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageButton
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circular_button"
+                android:src="@drawable/ic_friend" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friends" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/music"
-            android:layout_margin="16dp"/>
-
-        <android.support.v7.widget.AppCompatImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_notifications"
-            style="?android:attr/buttonBarButtonStyle"
-            android:background="@drawable/circular_button"
-            android:layout_toRightOf="@+id/music"
+            android:layout_below="@+id/gallery"
+            android:layout_margin="8dp"
+            android:layout_toEndOf="@+id/friend"
+            android:layout_toRightOf="@+id/friend"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageButton
+
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circular_button"
+                android:src="@drawable/ic_music" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Music"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/location"
-            android:layout_margin="16dp" />
+            android:layout_toRightOf="@+id/music"
+            android:orientation="vertical"
+            android:layout_margin="8dp"
+            android:gravity="center">
+
+            <android.support.v7.widget.AppCompatImageButton
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circular_button"
+                android:src="@drawable/ic_notifications" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notifications"/>
+
+        </LinearLayout>
+
+
 
 
     </RelativeLayout>
-
-
 
 
 </LinearLayout>
